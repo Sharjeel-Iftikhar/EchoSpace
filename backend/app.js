@@ -1,18 +1,22 @@
 import express from 'express'
-import runDatabase from './database/db.js'
+import Connection from './database/db.js'
 import dotenv from 'dotenv'
 import authRouter from './routes/auth.js'
+import bodyParser from 'body-parser'
 
 
 dotenv.config()
 const app = express()
-const port = 3000;
+const port = process.env.DB_PORT
 
-app.use('/api/auth/',authRouter);
+
+
+app.use(bodyParser.json({limit: "30mb", extended: true}));
+app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
 const start = async () =>{
     try{
-        await runDatabase();
+        Connection();
         app.listen(port,()=>{
             console.log(`Server is running on port ${port}`)
         })
@@ -21,6 +25,10 @@ const start = async () =>{
         console.log(error)
     }
 }
+
+// Routes
+
+app.use('/api/auth/',authRouter);
 
 start();
 

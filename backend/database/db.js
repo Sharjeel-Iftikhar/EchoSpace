@@ -1,29 +1,29 @@
-import pkg from 'pg'
-const { Pool,Client } = pkg
+import mongoose from "mongoose";
 import dotenv from 'dotenv'
+
 dotenv.config()
 
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASS,
-    port: process.env.DB_PORT
-});
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = process.env.DB_PASSWORD
 
-const runDatabase = async () =>{
-    const client = await pool.connect()
-    try{
-        const {rows} = await client.query('SELECT current_user');
-        const current_user = rows[0]['current_user'];
-        console.log("Connected with the postgres Sql successfully having user",current_user);
-    }
-    catch(error){
-        console.log(error)
-    }
-    finally{
-        client.release()
-    }
+const Connection = () =>{
+    const MONG_URL = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.jklrsmv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+    mongoose.connect(MONG_URL);
+
+    mongoose.connection.on('connected', () => {
+        console.log("Connection Established with MongoDB");
+    })
+
+    mongoose.connection.on("disconneted", () => {
+        console.log("Connection Disconneted with MongoDB");
+
+    })
+
+    mongoose.connection.on('error', (err) => {
+        console.log("Connection Failed with MongoDB");
+    })
 }
 
-export default runDatabase
+export default Connection;
+
+
