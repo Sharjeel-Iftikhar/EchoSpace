@@ -2,12 +2,19 @@
 // import jwt from 'jsonwebtoken';
 
 
-const register =  (req,res,next) =>{
+export const register =  (req,res,next) =>{
     res.json({
         status: 'Success',
         message: 'SignUp route is working'
     });
 }
 
-export default register;
+
+export const login = (req,res,next) =>{
+    res.json({
+        status: 'Success',
+        message: 'Login route is working'
+    });
+}
+
 
