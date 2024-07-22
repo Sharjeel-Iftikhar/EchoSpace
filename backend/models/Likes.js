@@ -9,9 +9,9 @@ const LikeSchema = new mongoose.Schema({
     PostID : {
         type : Schema.Types.ObjectId, ref: 'Post',
     },
-    CommentID : {
-        type : Schema.Types.ObjectId, ref: 'Comment',
-    },
+    // CommentID : {
+    //     type : Schema.Types.ObjectId, ref: 'Comment',
+    // },
 
 
 },

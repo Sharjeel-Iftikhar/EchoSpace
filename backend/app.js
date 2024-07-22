@@ -29,6 +29,7 @@ const start = async () =>{
 // Routes
 
 app.use('/api/auth/',authRouter);
+// app.use('/api/post/',)
 
 start();
 
