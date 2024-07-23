@@ -1,6 +1,6 @@
-import Post from '../models/Posts';
-import User from '../models/User';
-import Like from '../models/Likes';
+import Post from '../models/Posts.js';
+import User from '../models/User.js';
+import Like from '../models/Likes.js';
 
 
 ////////////////// New Post /////////////////////
@@ -37,23 +37,26 @@ export const getPosts = async (req, res) => {
     const { userId } = req.params;
     const { type } = req.query; 
 
+    // console.log(`userId: ${userId}, type: ${type}`);
+
     try {
         let posts;
-        if (type === 'feed') {
+        if (type == 'feed') {
             // Fetch all other users' public posts
             posts = await Post.find({
                 $and: [
                     { UserID: { $ne: userId } },
-                    { Status: "Public" },
-                    { Published: true }
+                    { Status: 'Public' },
+                    { published: true }
                 ]
             });
-        } else if (type === 'myposts') {
+        } 
+        else if (type === 'myposts') {
             // Fetch all my posts
             posts = await Post.find({
                 $and: [
                     { UserID: userId },
-                    { Published: true }
+                    { published: true }
                 ]
             });
         }
@@ -62,7 +65,7 @@ export const getPosts = async (req, res) => {
                 $and: [
                     { UserID: userId },
                     { Status: "Draft" },
-                    { Published: false }
+                    { published: false }
                 ]
             }) // fetching all my drafted posts
         }
@@ -137,7 +140,22 @@ export const handlePostAction = async (req, res) => {
                 const savedLike = await newLike.save();
                 return res.status(201).json(savedLike);
             }
-        } else {
+        } 
+        else if(action==='comment'){
+            const {comment} = req.body;
+            if(!comment){
+                return res.status(400).json({message:"Comment is required"});
+            }
+            post.Comments.push({
+                UserID: userId,
+                description: comment,
+                Likes: []
+            });
+            const updatedPost = await post.save();
+            return res.status(200).json(updatedPost);
+        }
+        
+        else {
             return res.status(400).json({ message: 'Invalid action parameter' });
         }
     } catch (err) {

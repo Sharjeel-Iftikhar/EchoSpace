@@ -2,6 +2,7 @@ import express from 'express'
 import Connection from './database/db.js'
 import dotenv from 'dotenv'
 import authRouter from './routes/auth.js'
+import postRouter from './routes/post.js';
 import bodyParser from 'body-parser'
 
 
@@ -29,7 +30,7 @@ const start = async () =>{
 // Routes
 
 app.use('/api/auth/',authRouter);
-// app.use('/api/post/',)
+app.use('/api/post/',postRouter);
 
 start();
 

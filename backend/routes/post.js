@@ -8,10 +8,11 @@ const router = express.Router();
 
 
 router.post('/create',verifyToken, createPost);
-router.get('/',verifyToken, getPosts);
+router.get('/:userId',verifyToken, getPosts);
 router.delete('/delete',verifyToken, DeletePost);
 router.patch('/:postId/update',verifyToken, handlePostAction);
 
+export default router;
 
 
 // router.get('/:userId/Drafts',verifyToken, DraftedPosts);

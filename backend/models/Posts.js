@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 
-import Comment from '../models/Comments.js';
+import {CommentSchema} from '../models/Comments.js';
+
+import Schema from "mongoose";
 
 const PostSchema = new mongoose.Schema({
     UserID : {
@@ -16,7 +18,7 @@ const PostSchema = new mongoose.Schema({
         type : String,
         default : "",
     },
-    Comments : [Comment],
+    Comments : [CommentSchema],
     Status :{
         type : String,
         enum : ["Public", "Private","Draft"],

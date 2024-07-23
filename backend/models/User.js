@@ -27,10 +27,10 @@ const UserSchema = new mongoose.Schema({
         type : String,
         default : ""
     },
-    // Followers :{
-    //     type : Array,
-    //     default : []
-    // },
+    friends :{
+        type: Array,
+        default : []
+    },
     location : {
         type : String,
         default : ""
