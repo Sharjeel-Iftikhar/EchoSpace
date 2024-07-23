@@ -148,7 +148,7 @@ export const handlePostAction = async (req, res) => {
             }
             post.Comments.push({
                 UserID: userId,
-                description: comment,
+                Description: comment,
                 Likes: []
             });
             const updatedPost = await post.save();

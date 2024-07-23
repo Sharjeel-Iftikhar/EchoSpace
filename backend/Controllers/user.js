@@ -19,10 +19,10 @@ export const getUser = async( req,res ) =>{
 ////////////////////////////////////////////////////////////////////////
 
 export const updateProfile = async( req,res ) =>{
-    const {id} = req.params;
+    const {UserId} = req.params;
     const {Email,Name,location,Bio,ProfilePic} = req.body;
     try{
-        const user = await User.findById(id);
+        const user = await User.findById(UserId);
         if(!user){
             return res.status(404).json({message:"User not found"});
         }
@@ -71,9 +71,9 @@ export const getUserFriends = async( req,res ) =>{
 ///////////////////////////////// Add Friend Or Remove Friend ////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
 
-export const addReomveFrnd = async (res,req) =>{
+export const addReomveFrnd = async (req,res) =>{
     const {id} = req.params;
-    const {friendId} = req.body;
+    const {friendId} = req.params;
     try{
         const user = await User.findById(id);
         const friend = await User.findById(friendId);
@@ -85,7 +85,7 @@ export const addReomveFrnd = async (res,req) =>{
         const isFriend = user.friends.includes(friendId);
         if(isFriend){
             user.friends = user.friends.filter((id) => id !== friendId);
-            friend.friends = friend.filter((id) => id !==id);
+            friend.friends = friend.friends.filter((id) => id !==id);
         }
         else{
             user.friends.push(friendId);

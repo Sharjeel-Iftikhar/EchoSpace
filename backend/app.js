@@ -3,6 +3,7 @@ import Connection from './database/db.js'
 import dotenv from 'dotenv'
 import authRouter from './routes/auth.js'
 import postRouter from './routes/post.js';
+import userRouter from './routes/user.js'
 import bodyParser from 'body-parser'
 
 
@@ -31,6 +32,7 @@ const start = async () =>{
 
 app.use('/api/auth/',authRouter);
 app.use('/api/post/',postRouter);
+app.use('/api/user/',userRouter);
 
 start();
 
