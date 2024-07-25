@@ -57,10 +57,11 @@ header nav ul li a i {
 }
 
 
-header .btn-header {
+
+.btn-header {
     background: #00D581;
     color: #fff;
-    padding: 10px 20px;
+    padding: 13px 22px;
     text-decoration: none;
     border-radius: 5px;
     margin-left: auto;
@@ -252,19 +253,331 @@ header::after {
     align-items: center;
     gap: 10px;
     width: 60%;
-    margin-left: 53px;
-    margin-right: 53px;
+    margin-left: 37px;
+    margin-right: 37px;
     margin-bottom: 42px;
 }
 .strategy-container{
   
-    width: 90%;
+    width: 93%;
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
     align-items: start;
     justify-content: space-between;
     padding-top: 30px;
+}
+.strategy-container p{
+    font-size: 14px;
+    width: 71%;
+    letter-spacing: 2.2px;
+    word-spacing: 2.2px;
+    line-height: 1.9;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+/* Trusted by Section */
+
+.Trusted-by {
+    margin-top: 50px;
+}
+
+.Trusted-by p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 7.2px;
+    color: #364663;
+}
+
+.Trusted-by-brands {
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Trusted-by-brands img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Explore */
+.explore{
+    
+    background-color: #E2FFF6;
+   
+   
+}
+.explore-bg{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 50px;
+    align-items: center;
+    background: url('/assets/explore.png') no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+.explore h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 53%;
+}
+.explore-btn{
+    background: #00D581;
+    color: #fff;
+    padding: 13px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 7px 9px -1px rgba(0,1,0,0.21);
+    margin-bottom: 80px;
+}
+.fa-circle{
+    margin-left: 10px;
+}
+
+/* Work Structure */
+.Work-Structure .service-container{
+    width:16%;
+}
+.work-container{
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 80px;
+    padding-left: 8px;
+    flex-direction: column;
+}
+.work-container h1{
+    font-size: 34px;
+}
+.work-container p{
+    font-size: 14px;
+    color:#364663;
+}
+
+.work-container .work-types{
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.work-container .work-types .work-item{
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    
+}
+.work-container .work-types .work-item .work-img{
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+}
+.work-container .work-types .work-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.work-item-2{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    border-left: 1px solid #DDE3F7;
+    border-right: 1px solid #DDE3F7;
+}
+.work-item-2 .work-img-2{
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+}
+
+
+.work-item-2 p{
+    font-size: 14px;
+    color: #364663;
+    width: 73%;
+    text-align: center;
+}
+.work-item p{
+    font-size: 14px;
+    color: #364663;
+    width: 73%;
+    text-align: center;
+} 
+
+/* Arsenals */
+
+.Arsenals .service-container{
+    width: 13%;
+}
+.Arsenals .Integration{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.Arsenals .Integration h1{
+    font-size: 40px;
+    width: 32%;
+    line-height: 1.4;
+   
+}
+.Arsenals .Integration p{
+    font-size: 14px;
+    color: #364663;
+    width: 68%;
+}
+.Arsenals .view-all{
+    padding-top: 20px;
+}
+.Integration .inte-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    
+}
+.Integration .inte-text .green-color{
+    color: #00D681;
+}
+.integration-brands{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.logo-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+
+.logo-item {
+    width: 114px;
+    height: 98px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 1px rgba(209,224,238,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-item img {
+    max-width: 100%;
+    height: auto;
+}
+.inte-logos{
+    margin-bottom: 80px;
+}
+
+/* Testimonials */
+
+.Testimonials .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  
+    margin-top: 80px;
+}
+.Testimonials .service-container{
+    width: 28%;
+    margin: 0 auto;
+}
+.Testimonials .Testimonials-main{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 40px;
+    width: 64%;
+    font-weight: 500;
+    margin-bottom: 100px;
+
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    width: 62%;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.testimonial-main {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-pic {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.testimonial-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    flex: 1 1 auto;
+}
+
+.testimonial-text h3 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.testimonial-text p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Additional client pictures */
+.additional-pics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.additional-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.additional-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Footer styling */
