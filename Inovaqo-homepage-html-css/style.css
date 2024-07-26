@@ -21,6 +21,7 @@ header{
     justify-content: space-between;
 }
 
+
 /* Header styling */
 header .logo {
     flex: 1;
@@ -98,14 +99,15 @@ header::after {
     background: url('/assets/hero-left.png') no-repeat;
     flex: 1;
     margin-top: -89px;
-    padding-left: 100px;
+    padding-left: 65px;
+    
 
 }
 .hero .hero-content h1{
     font-size: 54px;
     font-weight: 559;
     line-height: 1.2;
-    width: 60%;
+    width: 66%;
     margin-top: 130px;
 
 }
@@ -193,10 +195,13 @@ header::after {
 /* Services section styling */
 
 .Services{
-    margin-top: 50px;
-    background: url('/assets/b-bubble.png') no-repeat;
-    max-width: 1400px;
-      margin: 0 auto;
+  
+    max-width: 1419px;
+    margin: 0 auto;
+}
+
+.Services-bg{
+    background: url(/assets/b-bubble.png) no-repeat;
 }
 
 .scontainer{
@@ -253,8 +258,8 @@ header::after {
     align-items: center;
     gap: 10px;
     width: 60%;
-    margin-left: 37px;
-    margin-right: 37px;
+    margin-left: 46px;
+    margin-right: 46px;
     margin-bottom: 42px;
 }
 .strategy-container{
@@ -310,9 +315,10 @@ header::after {
     
     background-color: #E2FFF6;
    
-   
 }
-.explore-bg{
+
+
+.explore-content{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -322,7 +328,8 @@ header::after {
     align-items: center;
     background: url('/assets/explore.png') no-repeat;
     background-size: cover;
-    background-position: 100%;
+    background-position: bottom;
+    
 }
 .explore h1{
     font-size: 30px;
@@ -492,6 +499,89 @@ header::after {
     margin-bottom: 80px;
 }
 
+/* How we engage Section */
+
+.Engage{
+    margin-top: 100px;
+}
+.Engage-heading{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 93%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.Engage-heading h1{
+    font-size: 40px;
+}
+
+.Engage-heading p{
+    font-size: 14px;
+    color: #364663;
+    width: 70%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.Engage-background{
+    background: url('/assets/bubbles.png') no-repeat;
+    background-size: contain;
+}
+
+.Engage-diagram .Engage-facility{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 25%;
+    margin: 0 auto;
+}
+.Engage-diagram .Engage-facility .enga-img{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px rgba(188,199,209,1);
+}
+.Engage-diagram .Engage-facility img{
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.Engage-diagram .Engage-facility p{
+    font-size: 14px;
+    color: #364663;
+    width: 70%;
+    text-align: center;
+}
+.Engage-diagram .Engage-facility h2{
+    font-size: 30px;
+    color: black;
+    width: 70%;
+    text-align: center;
+}
+
+.Engage-diagram .Eng-facility-pic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+.Engage-diagram .Eng-facility-pic .Engage-img{
+    width: 238px;
+    height: 236px;
+}
+.Engage-diagram .Eng-facility-pic .Engage-img img{
+    width: 100%;
+    height: 100%;
+}
 /* Testimonials */
 
 .Testimonials .container{
@@ -580,10 +670,275 @@ header::after {
     object-fit: cover;
 }
 
-/* Footer styling */
-footer {
-    background: #333;
+/* Your Tech */
+
+.YourTech{
+    margin-top: 50px;
+    background-color: #DDFEF4;
+
+}
+.YourTech .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 93%;
+}
+.YourTech .container .heading{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 90px;
+}
+.YourTech .container .heading h1{
+    font-size: 40px;
+    font-weight: 600;
+    width: 35%;
+    line-height: 1.4;
+}
+.YourTech .container .heading p{
+    width: 38%;
+}
+.YourTech .imgAndBtn{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+.YourTech .imgAndBtn .img-div{
+    width: 35%;
+}
+.YourTech .imgAndBtn .btn{
+    width: 38%;
+    margin-top: 40px;
+    
+}
+.YourTech .imgAndBtn .btn .yourTechBtn{
+    background: black;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 17px 31px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+
+/* Footer styling */
+.footer {
+    color: black;
+    padding: 40px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+    padding-top: 40px;
+    border-bottom: 1px solid #D9DBEA;
+    padding-bottom: 70px;
+}
+
+/* Left section styling */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.footer-logo .logo-div{
+    width: 100px;
+    cursor: pointer;
+}
+
+.footer-logo img {
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    width: 76%;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    width: 120px;
+    height: 30px;
+}
+
+.footer-social a img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+
+/* Right section styling */
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    width: 57%;
+    float: right;
+    gap: 85px;
+    
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #364663;
+    font-weight: 200;
+}
+
+.footer-bottom {
+    color: black;
+}
+
+.footer-bottom .containerr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 93%;
+    padding-top: 20px;
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: 14px;
+}
+.footer-links p{
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #0072F8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+@media screen and (min-width: 1920px) {
+    .container{
+        width: 90%;
+        max-width: 1710px;
+    }
+    .hero .hero-content {
+        padding-left: 99px;
+    }
+
+    .hero .hero-content p {
+        margin-bottom: 104px;
+    }
+
+
+    .Achievments{
+        background-position: center;
+    margin-top: 140px;
+    padding-bottom: 120px;
+    }
+
+    .Services {
+    
+        max-width: 1710px;
+        margin: 0 auto;
+    }
+    .Services-bg {
+        background-size: contain;
+    }
+
+    .scontainer {
+  
+        width: 100%;
+        max-width: 1710px;
+        margin: 0 auto;
+    }
+
+    .service-cards {
+
+        margin-left: 0px;
+        margin-right: 0px;
+ 
+    }
+    .strategy-container {
+        width: 100%;
+        max-width: 1710px;
+    }
+
+    .explore-content {
+        background-position: center bottom;
+        background-size: cover;
+        padding-top: 255px;
+        padding-bottom: 100px;
+    }
+
+    .work-container {
+        width: 100%;
+        max-width: 1710px;
+  
+    }
+    .logo-row {
+       
+        justify-content: center;
+        gap: 36px;
+        
+    }
+    .YourTech .container {
+
+        max-width: 1710px;
+      
+        width: 100%;
+    }
+
+    .footer .container {
+
+        max-width: 1710px;
+       
+    }
+
+    .footer-bottom .containerr {
+      
+        max-width: 1710px;
+       
+        width: 100%;
+        
+    }
+    
+    
+
 }
