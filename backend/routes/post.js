@@ -14,5 +14,6 @@ router.patch('/:postId/update',verifyToken, handlePostAction);
 
 export default router;
 
+// stay tuned for further upates
 
 // router.get('/:userId/Drafts',verifyToken, DraftedPosts);
